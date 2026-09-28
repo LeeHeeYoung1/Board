@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<form action="singUp" id="frm" method="post">
+<form action="members/signup" id="frm" method="post">
 
 <div class="container">
 	<fieldset id="box1">
@@ -52,6 +52,7 @@
 		
 		<span>비번확인</span>
 		<input type="password" name="pw2" id="pw2" placeholder="비번2 ㄱ"><br>
+
 		<div id="pwCheck"></div>
 	</fieldset>
 	
@@ -106,7 +107,7 @@
     let id = $("#id").val();
 
     $.ajax({
-        url: "/members/idcheck",
+        url: "/members/idCheck",
         data: {
             id: id
         }
@@ -134,11 +135,11 @@
 	
 	
 	//비밀번호 확인
-	$("#pw2").on("keyup", function(){
+	$("#pw,#pw2").on("keyup", function(){
 	    if($("#pw").val() == $("#pw2").val()){
-	        $("#pwCheck").css("color","black").html("비밀번호 맞");
+	        $("#pwCheck").css("color","black").css("font-size", "12px").html("비밀번호 맞");
 	    } else {
-	        $("#pwCheck").css("color","red").html("비밀번호 틀");
+	        $("#pwCheck").css("color","red").css("font-size", "12px").html("비밀번호 틀");
 	    }
 	});
 	
@@ -255,5 +256,7 @@
 	    }
 
 </script>
+
+
 </body>
 </html>

@@ -16,7 +16,7 @@ public class MembersDAO {
 	
 	public int signup(MembersDTO dto) {
 	
-		String sql = "insert members from values(?,?,?,?,?,?,?,?,systimestamp)";
+		String sql = "insert into members values(?,?,?,?,?,?,?,?,systimestamp)";
 		return jdbc.update(sql, dto.getId(),dto.getPw(),dto.getName(),dto.getPhone(),dto.getEmail(),
 		        dto.getZipcode(),dto.getAddress1(),dto.getAddress2());
 	}

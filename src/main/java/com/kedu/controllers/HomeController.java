@@ -16,7 +16,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/")
 	public String home() {
-		return "members/singUp";
+		return "home";
 	}
 	
 }
