@@ -148,8 +148,8 @@
 		border : 1px solid black;
 		align-items: center;
 		justify-content: center;
-
 	}
+	
 </style>
 </head>
 <body>
@@ -163,14 +163,16 @@
 			<c:when test="${loginId != null}">
 				<div class="topbtn">
 					<p>${loginId}</p>
-					<i class="fa-regular fa-user"></i>
-					<i class="fa-solid fa-bars"></i>
+					<a href="/members/mypage"><i class="fa-solid fa-address-book">마이페이지</i></a>
+					<a href="#"><i class="fa-solid fa-bars"></i></a>
 				</div>
 			</c:when>
 			<c:otherwise>
 				<div class="topbtn">
-					<i class="fa-regular fa-user"></i>
-					<i class="fa-solid fa-bars"></i>
+					<a href="/members/login"><i class="fa-solid fa-address-card">로그인</i></a>
+					<a href="members/register"><i class="fa-regular fa-user">회원가입</i></a>
+					<a href="#"><i class="fa-solid fa-bars"></i></a>
+					
 				</div>
 			</c:otherwise>
 		</c:choose>
